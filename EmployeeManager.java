@@ -5,6 +5,15 @@ public class EmployeeManager {
     
     @SuppressWarnings("resource")
     public static void main(String[] args) {
+        
+        if (args.length == 0) {
+        System.err.println("Error: Please provide a command argument.");
+        System.err.println("Usage: java EmployeeManager <command>");
+        System.err.println("Commands: l, s, +<n>, ?<n>, c, u<n>, d<n>");
+        System.exit(1);
+    }
+
+
         // Check arguments
         if (args[0].equals("l")) {
             System.out.println("Loading data ...");
